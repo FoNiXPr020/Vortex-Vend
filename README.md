@@ -63,8 +63,5 @@ You can use [XAMPP](https://www.apachefriends.org) to run it in your localhost o
 - [Mohamed Barhoun](emailto:rogueman2018@gmail.com)
 - [Anas houmaid](emailto:anashoumaid19@gmail.com)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**© 2024 FoNiX Technologies** - **© 2024 VortexVend**
+# **© 2024 FoNiX Technologies** - **© 2024 VortexVend**

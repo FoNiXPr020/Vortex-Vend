@@ -42,6 +42,16 @@ FoNiX is a PHP framework developed for building web applications efficiently. It
 - PHP 8.2+
 - Composer (for package management)
 
+##### Installation
+
+You can install the FoNiX framework via git clone. Run the following command:
+```bash
+git clone https://github.com/FoNiXPr020/Vortex-Vend.git
+cd Vortex-Vend
+composer install
+```
+
+You can use [XAMPP](https://www.apachefriends.org) to run it in your localhost or hosted server by installing [NGINX](https://nginx.org/en/download.html) or [APACHE](https://httpd.apache.org/download.cgi).
 
 ## Contact
 

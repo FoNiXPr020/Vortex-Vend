@@ -45,11 +45,11 @@ FoNiX is a PHP framework developed for building web applications efficiently. It
 
 ## Contact
 
-- FoNiX: [Mohamed Barhoun](rogueman2018@gmail.com)
-- Anas houmaid: [Anas houmaid](anashoumaid19@gmail.com)
+- FoNiX: [Mohamed Barhoun](emailto:rogueman2018@gmail.com)
+- Anas houmaid: [Anas houmaid](emailto:anashoumaid19@gmail.com)
 
 ## AUTHORS
 
-- [Mohamed Barhoun](rogueman2018@gmail.com)
-- [Anas houmaid](anashoumaid19@gmail.com)
+- [Mohamed Barhoun](emailto:rogueman2018@gmail.com)
+- [Anas houmaid](emailto:anashoumaid19@gmail.com)
 

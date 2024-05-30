@@ -64,4 +64,4 @@ You can use [XAMPP](https://www.apachefriends.org) to run it in your localhost o
 - [Anas houmaid](emailto:anashoumaid19@gmail.com)
 
 
-# **© 2024 FoNiX Technologies** - **© 2024 VortexVend**
+### **© 2024 FoNiX Technologies** - **© 2024 VortexVend**

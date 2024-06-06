@@ -24,6 +24,7 @@ $router->post('/register/confirmation', 'Register\RegisterController@GoogleRegis
 // Dashboard
 $router->get('/dashboard', 'Dashboard\DashboardController@index')->middleware('auth');
 $router->get('/products', 'Dashboard\DashboardController@products')->middleware('auth');
+$router->delete('/delete-account', 'Dashboard\DashboardController@deleteAccount')->middleware('auth');
 
 // Profile
 $router->get('/profile', 'Profile\ProfileController@index')->middleware('auth');

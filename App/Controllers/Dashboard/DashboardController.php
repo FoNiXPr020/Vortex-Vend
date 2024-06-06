@@ -8,8 +8,6 @@ use Core\Session;
 use Core\Validation;
 use Core\App;
 use Core\Router;
-use \Firebase\JWT\JWT;
-use Google\Client;
 
 class DashboardController
 {
@@ -77,5 +75,15 @@ class DashboardController
             'user' => $user,
             'products' => $products
         ]);
+    }
+
+    public function deleteAccount()
+    {
+        $user = App::getUser();
+        $this->database->Query("DELETE FROM users WHERE id = ?", [$user['user_id']], "DELETE");
+        Session::destroy();
+
+        $this->errors->success('updated', "Your account has been deleted successfully");
+        return Functions::RedirectSession("/login", [], [], $this->errors->succeed());
     }
 }

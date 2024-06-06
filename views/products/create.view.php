@@ -135,7 +135,7 @@ use Core\Validation;
                                     <div class="card-header border-0 bg-white p-0 mb-3">
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex align-items-center gap-2">
-                                                <div><img src="<?= isset($user['profile_img']) ? $user['profile_img'] : "/assets/img/user-default.webp" ?>" alt="#" class="img-fluid rounded-circle"></div>
+                                                <div><img src="<?= isset($user['profile_img']) ? $user['profile_img'] : $_ENV['APP_DEFAULT_PROFILE_IMG'] ?>" alt="#" class="img-fluid rounded-circle"></div>
                                                 <div class="fw-bold"><?= $user['username'] ?></div>
                                             </div>
                                         </div>

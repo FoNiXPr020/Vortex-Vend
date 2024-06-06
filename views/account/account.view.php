@@ -50,6 +50,7 @@ use Core\Session;
                             </div>
                             <div>
                                 <button type="button" class="btn btn-<?= isset($user['verified']) && $user['verified'] == 1 ? 'success' : 'warning'; ?> btn-sm" data-bs-toggle="modal" data-bs-target="#VerifyModal"><?= isset($user['verified']) && $user['verified'] == 1 ? 'Verified' : 'Unverified'; ?></button>
+                                <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteModal">Delete Account</button>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -177,6 +178,32 @@ use Core\Session;
         </div>
     </div>
     <?php endif; ?>
+        <!-- Delete Modal -->
+        <div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="DeleteModalLabel">Account Deletion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>Are you sure you want to delete your account?, this action cannot be undone.
+                    <br><strong><?= $user['email_address'] ?></strong>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <form action="/delete-account" method="POST">
+                        <?php
+                        Validation::setMethod("DELETE");
+                        Validation::generateCsrfToken();
+                        ?>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-outline-danger btn-sm ms-2">Delete Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php require_once BASE_VIEW_MAIN . 'footer.php'; ?>
     <?php require_once BASE_VIEW_MAIN . 'scripts.php'; ?>

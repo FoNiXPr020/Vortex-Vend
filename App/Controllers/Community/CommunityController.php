@@ -22,7 +22,7 @@ class CommunityController
         ];
 
         $path = BASE_TEMPLATE . 'contact.php';
-        $email = "mohamedbarhoun1999@gmail.com";
+		$email = $_ENV["APP_EMAIL"];
         $mail = App::SendEmail($path, $email, "Contact Us", $data);
 
         if( !$mail ) {

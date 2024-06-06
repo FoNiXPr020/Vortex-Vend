@@ -1,0 +1,23 @@
+{
+    "short_name": "RubioTV",
+    "name": "Rubio TV",
+    "icons": [
+        {
+            "src": "assets/manifests/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/manifests/maskable_icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "orientation": "portrait",
+    "display": "standalone",
+    "scope": "/",
+    "background_color": "#000000ff",
+    "description": "Rubio TV is your premiere destination for cutting-edge IP.TV entertainment.Our team of experts and enthusiasts work to provide you with the best IPTV experience.Join us today and experience the future of IPTV.",
+    "theme_color": "#001233"
+}

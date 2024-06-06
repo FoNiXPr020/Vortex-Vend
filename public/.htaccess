@@ -1,0 +1,35 @@
+# Secure .htaccess file
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Limit access to the .htaccess file
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</Files>
+
+# Prevent access to sensitive files
+<FilesMatch "(\.bak|\.config|\.sql|\.ini|\.log|\.sh)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Normalize URL by removing extra slashes
+RewriteCond %{THE_REQUEST} //
+RewriteRule .* /$0 [R=301,L]
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{SCRIPT_FILENAME} !-l
+
+    RewriteRule ^(.*)$ index.php/$1
+</IfModule>

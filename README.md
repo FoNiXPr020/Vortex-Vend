@@ -37,6 +37,37 @@ FoNiX is a PHP framework developed for building web applications efficiently. It
 - **Middleware Support**: Apply middleware to routes for processing requests and responses.
 - **Template Engine**: Use template files for separating HTML from PHP logic.
 
+#### Our Team
+
+##### **Mohamed Barhoun**
+ - **Full-stack Developer**
+ - **Role** : focus on BACK-END & FRONT-END 
+ - **Frontend Development:** Includes Bootstrap, Jquery, HTML, CSS and JavaScript.
+ - **Backend development:** Includes PHP for bulding MVC pattern used for developing user interfaces and APIs.
+ - **Setup of data Models, Seeders and Factories.**
+ - **Creation of APIs and authentication.**
+ - **Creation of middleware and authorization**
+ 
+##### **Anas Houmaid**
+ - **Full-stack Developer**
+ - **Role** : focus on DevOps & FRONT-END 
+ - ** Frontend Development:** Includes Bootstrap, Jquery, HTML, CSS and JavaScript.
+ - **Devops developemet:** Setting up the the server, database maintenance and security updates.
+ - **CI/CD:** Setting up pipelines for automated deployment. This involved integrating code changes, running tests, and deploying to production.
+
+### **STORY VORTEX**
+
+#### From discord Conversations to Code: The Birth of Our E-Commerce Venture
+##### The Inception:
+**It all began during a late-night coding session. My partner and I. We had a shared vision a marketplace that’s not found in reality yet. We didn’t want just another e-commerce platform; we craved something extraordinary.**
+##### The spark::
+**it hit us like a lightning bolt: Vortex Vend. The name echoed mystery, energy, and possibility. We envisioned a whirlpool of creativity, swirling with products from every corner of the globe. Vortex Vend would be the connection where dreams met commerce.**
+##### Design:
+**Our canvas is digital, but its impact is cosmic. Vortex Vend needed an interface that whispered elegance and shouted usability. We embraced minimalism—clean lines, generous whitespace, and intuitive navigation.**
+##### Epilogue:
+**here we are, orbiting the digital Earth. Vortex Vend a beacon for buyers, a launchpad for sellers. Our deployment journey continues, fueled by passion and a touch of server-side magic.**
+
+
 ##### Requirements
 
 - PHP 8.2+

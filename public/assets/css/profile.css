@@ -1,0 +1,18 @@
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+#image-to-crop {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

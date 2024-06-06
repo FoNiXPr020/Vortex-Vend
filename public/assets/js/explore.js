@@ -1,3 +1,11 @@
+function getBaseURL() {
+    var baseURL = window.location.protocol + '//' + window.location.hostname;
+    if (window.location.port) {
+        baseURL += ':' + window.location.port;
+    }
+    return baseURL;
+}
+
 // Helper function to truncate strings
 function truncateString(str, num) {
     if (str.length <= num) {
@@ -13,7 +21,7 @@ function LoadProducts() {
     var offset = button.data('offset');
 
     $.ajax({
-        url: 'http://localhost/api/v1/explore/products',
+        url: getBaseURL() + '/api/v1/explore/products',
         type: 'POST',
         data: {
             offset: offset,
@@ -67,7 +75,7 @@ function LoadArrivals() {
     var offset = button.data('offset');
 
     $.ajax({
-        url: 'http://localhost/api/v1/explore/new-arrivals',
+        url: getBaseURL() + '/api/v1/explore/new-arrivals',
         type: 'POST',
         data: {
             offset: offset,
@@ -121,7 +129,7 @@ function LoadPopulars() {
     var offset = button.data('offset');
 
     $.ajax({
-        url: 'http://localhost/api/v1/explore/most-popular',
+        url: getBaseURL() + '/api/v1/explore/most-popular',
         type: 'POST',
         data: {
             offset: offset,

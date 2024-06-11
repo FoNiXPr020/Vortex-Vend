@@ -12,6 +12,11 @@ class CommunityController
         Functions::view('community/contact.view.php');
     }
 
+    /**
+     * Submits a contact form with email, about, and message data.
+     *
+     * @return Functions::RedirectSession Returns a redirect session object.
+     */
     public function contactSubmit()
     {
         $functions = new Functions();
@@ -22,10 +27,10 @@ class CommunityController
         ];
 
         $path = BASE_TEMPLATE . 'contact.php';
-		$email = $_ENV["APP_EMAIL"];
+        $email = $_ENV["APP_EMAIL"];
         $mail = App::SendEmail($path, $email, "Contact Us", $data);
 
-        if( !$mail ) {
+        if (!$mail) {
             $functions->error('email_address', "Failed to send email");
             return Functions::RedirectSession("/register", $data, $functions->errors());
         }
@@ -33,6 +38,12 @@ class CommunityController
         $functions->success('contact', "Your message has been sent successfully");
         return Functions::RedirectSession("/contact", [], [], $functions->succeed());
     }
+
+    /**
+     * Renders the help center view.
+     *
+     * @return void
+     */
     public function helpCenter()
     {
         Functions::view('community/help-center.view.php');

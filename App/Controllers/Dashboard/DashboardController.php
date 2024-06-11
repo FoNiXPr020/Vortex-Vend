@@ -19,6 +19,12 @@ class DashboardController
         $this->database = Database::getInstance();
         $this->errors = new Functions();
     }
+
+    /**
+     * Retrieves the user's dashboard data and renders the dashboard view.
+     *
+     * @return void
+     */
     public function index()
     {
         //Functions::dd($_SESSION);
@@ -51,8 +57,6 @@ class DashboardController
         INNER JOIN users AS sellers ON products.seller_id = sellers.id
         WHERE transactions.buyer_id = ?", [$user['id']], "SELECT") ?? null;
 
-        
-
         Functions::view("dashboard/dashboard.view.php", [
             'data' => Session::get('data'),
             'user' => $user,
@@ -66,6 +70,11 @@ class DashboardController
         ]);
     }
 
+    /**
+     * Retrieves the products of the current user.
+     *
+     * @return void
+     */
     public function products()
     {
         $user = App::getUser();

@@ -53,12 +53,12 @@ $router->put('/update-product/{id}', 'Products\ProductController@updateSubmit')-
 $router->delete('/delete-product/{id}', 'Products\ProductController@delete')->middleware('auth');
 $router->get('/products/{id}', 'Products\ProductController@show');
 
-
-$router->get('/notes', 'NotesController@index');
-$router->get('/phpinfo', 'NotesController@phpinfo');
+// Only for testing
+//$router->get('/notes', 'NotesController@index');
+//$router->get('/phpinfo', 'NotesController@phpinfo');
 // $router->get('/notes/email', 'NotesController@template');
-$router->get('/notes/password', 'NotesController@template2');
-$router->get('/notes/success', 'NotesController@template3');
+//$router->get('/notes/password', 'NotesController@template2');
+//$router->get('/notes/success', 'NotesController@template3');
 
 // APIs - Users
 $router->get('/api/v1/users', 'Api\v1\Users@index');
@@ -88,9 +88,9 @@ $router->get('/api/v1/explore/top-sellers', 'Api\v1\Products@TopSellers');
 $router->post('/api/v1/explore/most-popular', 'Api\v1\Products@MostPopularLoadMore');
 
 // User Dashboard
-$router->get('/{username}', 'IndexController@userProfile');
-$router->get('/{username}/explore', 'IndexController@exploreProfile');
 $router->post('/checkout/{id}', 'IndexController@Checkout');
 $router->get('/payment/success', 'IndexController@success');
 $router->patch('/download-invoice', 'IndexController@downlaod');
 $router->post('/payment/update', 'Profile\ProfileController@updateinsuccess')->middleware('auth');
+$router->get('/{username}', 'IndexController@userProfile');
+$router->get('/{username}/explore', 'IndexController@exploreProfile');
